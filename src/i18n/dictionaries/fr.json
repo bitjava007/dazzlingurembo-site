@@ -43,17 +43,43 @@
     "modelsTitle": "Créations récentes",
     "bespokeEyebrow": "Savoir-faire",
     "bespokeTitle": "Confection sur mesure",
-    "contactTitle": "Une question sur un modèle ? Écrivez-nous directement."
+    "contactTitle": "Une question sur un modèle ? Écrivez-nous directement.",
+    "collectionsTitle": "Collections",
+    "modelsCta": "Voir la galerie"
   },
   "pages": {
-    "collections": { "title": "Collections", "eyebrow": "Catalogues" },
-    "models": { "title": "Nos créations", "eyebrow": "Galerie" },
-    "story": { "title": "Notre histoire", "eyebrow": "La maison" },
-    "craftsmanship": { "title": "Savoir-faire et confection sur mesure", "eyebrow": "Atelier" },
-    "showroom": { "title": "Showroom", "eyebrow": "Nous rendre visite" },
-    "contact": { "title": "Contact", "eyebrow": "Écrire à la maison" },
-    "legal": { "title": "Mentions légales", "eyebrow": "Informations" },
-    "privacy": { "title": "Politique de confidentialité", "eyebrow": "Informations" }
+    "collections": {
+      "title": "Collections",
+      "eyebrow": "Catalogues"
+    },
+    "models": {
+      "title": "Nos créations",
+      "eyebrow": "Galerie"
+    },
+    "story": {
+      "title": "Notre histoire",
+      "eyebrow": "La maison"
+    },
+    "craftsmanship": {
+      "title": "Savoir-faire et confection sur mesure",
+      "eyebrow": "Atelier"
+    },
+    "showroom": {
+      "title": "Showroom",
+      "eyebrow": "Nous rendre visite"
+    },
+    "contact": {
+      "title": "Contact",
+      "eyebrow": "Écrire à la maison"
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "eyebrow": "Informations"
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "eyebrow": "Informations"
+    }
   },
   "content": {
     "pending": "Contenu en cours de préparation",
@@ -72,5 +98,41 @@
     "eyebrow": "Erreur 404",
     "title": "Cette page est introuvable.",
     "text": "Elle a peut-être été déplacée, ou n'est pas encore publiée."
+  },
+  "demo": {
+    "banner": "Aperçu avec contenus de démonstration — modèles, catalogues et photos seront remplacés par les contenus officiels."
+  },
+  "gallery": {
+    "filterLabel": "Filtrer par thématique",
+    "all": "Toutes",
+    "count_one": "{n} création",
+    "count_other": "{n} créations",
+    "empty": "Aucune création publiée dans cette thématique pour le moment.",
+    "intro": "Parcourez les créations par univers. Chaque modèle peut être réalisé sur mesure."
+  },
+  "catalogues": {
+    "intro": "Saisons, cérémonies et sélections : retrouvez les créations réunies par la maison.",
+    "view": "Voir le catalogue",
+    "all": "Tous les catalogues",
+    "models_one": "{n} modèle",
+    "models_other": "{n} modèles",
+    "empty": "Aucun catalogue publié pour le moment.",
+    "emptyModels": "Ce catalogue ne contient pas encore de modèle publié.",
+    "back": "Collections"
+  },
+  "model": {
+    "reference": "Réf.",
+    "material": "Tissu / matière",
+    "craftsmanship": "Confection",
+    "themes": "Thématiques",
+    "catalogues": "Catalogues",
+    "requestBespoke": "Demander ce modèle sur mesure",
+    "contactForm": "Formulaire de contact",
+    "whatsappMessage": "Bonjour Dazzling Urembo, je suis intéressé(e) par le modèle « {name} »{ref}. Pouvez-vous me renseigner ?",
+    "related": "Dans le même univers",
+    "photo": "Photo {i} sur {n}",
+    "frenchOnly": "Ce texte n'est pas encore disponible en anglais.",
+    "frenchOnlyLabel": "Version française",
+    "loading": "Chargement de la création…"
   }
 }

@@ -50,8 +50,11 @@ src/
 │   ├── global-not-found.tsx  404 des adresses sans route
 │   ├── robots.ts
 │   └── globals.css           charte : couleurs, typographies, boutons
-├── components/site/          en-tête, pied de page, blocs de page
-└── lib/                      paramètres du site, WhatsApp, métadonnées SEO
+├── components/site/          en-tête, pied de page, cartes, galerie photo, blocs de page
+└── lib/
+    ├── content/              accès aux contenus publiés (cache + étiquettes), types, démo
+    ├── site.ts               paramètres du site, lien WhatsApp
+    └── metadata.ts           URL canoniques et hreflang
 docs/
 └── PHASE-1-PLAN.md           analyse, schéma de données et plan validé
 ```
@@ -84,11 +87,21 @@ Aucun texte officiel, coordonnée ou photo n'est inventé. Tant qu'un contenu n'
 Les coordonnées se règlent provisoirement dans `.env.local` (voir `.env.example`), puis dans l'administration
 à partir de la Phase 4.
 
+### Contenus de démonstration
+
+Tant que Supabase n'est pas branché (Phase 4), `src/lib/content/demo.ts` fournit 6 thématiques,
+3 catalogues et 12 modèles marqués « exemple », sans photo. Un bandeau le signale en haut de chaque page
+(`isDemoContent` dans `src/lib/content/index.ts`). Les pages ne lisent les contenus qu'à travers
+`src/lib/content/index.ts` : la Phase 4 remplace la source sans toucher aux pages.
+
+Chaque lecture est mise en cache (`"use cache"`) et étiquetée (`themes`, `models`, `catalogues`,
+`model:<id>`, `catalogue:<id>`) pour que l'administration puisse publier sans reconstruction.
+
 ## Avancement
 
 - [x] Phase 1 — Analyse et planification (`docs/PHASE-1-PLAN.md`)
 - [x] Phase 2 — Fondation : Next.js, langues, charte, en-tête, pied de page, 404
-- [ ] Phase 3 — Site public : accueil, collections, galerie, fiches modèles, pages institutionnelles
+- [x] Phase 3 — Site public : accueil, collections, galerie filtrable, fiches modèles (données de démonstration)
 - [ ] Phase 4 — Supabase et administration
 - [ ] Phase 5 — Intégration, sécurité, SEO
 - [ ] Phase 6 — Tests, déploiement, guides

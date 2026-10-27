@@ -43,17 +43,43 @@
     "modelsTitle": "Recent creations",
     "bespokeEyebrow": "Craftsmanship",
     "bespokeTitle": "Bespoke tailoring",
-    "contactTitle": "A question about a creation? Write to us directly."
+    "contactTitle": "A question about a creation? Write to us directly.",
+    "collectionsTitle": "Collections",
+    "modelsCta": "View the gallery"
   },
   "pages": {
-    "collections": { "title": "Collections", "eyebrow": "Catalogues" },
-    "models": { "title": "Our creations", "eyebrow": "Gallery" },
-    "story": { "title": "Our story", "eyebrow": "The house" },
-    "craftsmanship": { "title": "Craftsmanship and bespoke tailoring", "eyebrow": "Atelier" },
-    "showroom": { "title": "Showroom", "eyebrow": "Visit us" },
-    "contact": { "title": "Contact", "eyebrow": "Write to the house" },
-    "legal": { "title": "Legal notice", "eyebrow": "Information" },
-    "privacy": { "title": "Privacy policy", "eyebrow": "Information" }
+    "collections": {
+      "title": "Collections",
+      "eyebrow": "Catalogues"
+    },
+    "models": {
+      "title": "Our creations",
+      "eyebrow": "Gallery"
+    },
+    "story": {
+      "title": "Our story",
+      "eyebrow": "The house"
+    },
+    "craftsmanship": {
+      "title": "Craftsmanship and bespoke tailoring",
+      "eyebrow": "Atelier"
+    },
+    "showroom": {
+      "title": "Showroom",
+      "eyebrow": "Visit us"
+    },
+    "contact": {
+      "title": "Contact",
+      "eyebrow": "Write to the house"
+    },
+    "legal": {
+      "title": "Legal notice",
+      "eyebrow": "Information"
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "eyebrow": "Information"
+    }
   },
   "content": {
     "pending": "Content in preparation",
@@ -72,5 +98,41 @@
     "eyebrow": "Error 404",
     "title": "This page cannot be found.",
     "text": "It may have moved, or may not be published yet."
+  },
+  "demo": {
+    "banner": "Preview with demonstration content — creations, catalogues and photos will be replaced by official content."
+  },
+  "gallery": {
+    "filterLabel": "Filter by theme",
+    "all": "All",
+    "count_one": "{n} creation",
+    "count_other": "{n} creations",
+    "empty": "No creation published in this theme yet.",
+    "intro": "Browse the creations by universe. Every piece can be made to measure."
+  },
+  "catalogues": {
+    "intro": "Seasons, ceremonies and selections: discover the creations gathered by the house.",
+    "view": "View the catalogue",
+    "all": "All catalogues",
+    "models_one": "{n} creation",
+    "models_other": "{n} creations",
+    "empty": "No catalogue published yet.",
+    "emptyModels": "This catalogue has no published creation yet.",
+    "back": "Collections"
+  },
+  "model": {
+    "reference": "Ref.",
+    "material": "Fabric / material",
+    "craftsmanship": "Craftsmanship",
+    "themes": "Themes",
+    "catalogues": "Catalogues",
+    "requestBespoke": "Request this piece made to measure",
+    "contactForm": "Contact form",
+    "whatsappMessage": "Hello Dazzling Urembo, I am interested in the creation “{name}”{ref}. Could you tell me more?",
+    "related": "In the same universe",
+    "photo": "Photo {i} of {n}",
+    "frenchOnly": "This text is not yet available in English.",
+    "frenchOnlyLabel": "French version",
+    "loading": "Loading creation…"
   }
 }

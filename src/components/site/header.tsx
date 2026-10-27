@@ -116,7 +116,7 @@ export function Header({ locale, homeHref, items, labels, whatsappHref }: Header
       </div>
 
       {open && (
-        <div id="mobile-menu" className="fixed inset-x-0 bottom-0 top-[65px] overflow-y-auto bg-ivory px-4 pb-10 sm:px-8 lg:hidden">
+        <div id="mobile-menu" className="absolute inset-x-0 top-full h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-ivory px-4 pb-16 sm:px-8 lg:hidden">
           <nav aria-label={labels.main}>
             <ul className="flex flex-col border-t border-line">
               {items.map((item) => (

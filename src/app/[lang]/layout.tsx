@@ -5,6 +5,7 @@ import { Footer } from "@/components/site/footer";
 import { Header, type NavItem } from "@/components/site/header";
 import { localePath, locales } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
+import { isDemoContent } from "@/lib/content";
 import { getSiteSettings, siteUrl, whatsappUrl } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -56,6 +57,9 @@ export default async function SiteLayout({ children }: LayoutProps<"/[lang]">) {
         >
           {dict.nav.skipToContent}
         </a>
+        {isDemoContent && (
+          <p className="bg-ink px-4 py-2 text-center text-[0.6875rem] uppercase tracking-[0.12em] text-mist">{dict.demo.banner}</p>
+        )}
         <Header
           locale={locale}
           homeHref={localePath(locale, "home")}

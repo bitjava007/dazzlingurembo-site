@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CatalogueCard, ModelCard, ThemeTile } from "@/components/site/cards";
 import { ArrowIcon, ChatIcon, ImageIcon } from "@/components/site/icons";
 import { PhotoPlaceholder } from "@/components/site/page-intro";
 import { localePath } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
+import { plural } from "@/i18n/format";
+import { getFeaturedCatalogues, getHomeModels, getThemes } from "@/lib/content";
 import { alternates } from "@/lib/metadata";
 import { getSiteSettings, whatsappUrl } from "@/lib/site";
 
@@ -13,7 +16,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function HomePage() {
   const locale = await getLocale();
-  const [dict, settings] = await Promise.all([getDictionary(locale), getSiteSettings()]);
+  const [dict, settings, catalogues, themes, models] = await Promise.all([
+    getDictionary(locale),
+    getSiteSettings(),
+    getFeaturedCatalogues(3),
+    getThemes(),
+    getHomeModels(4),
+  ]);
+  const galleryHref = localePath(locale, "models");
   const [before, after] = splitTagline(dict.meta.tagline);
 
   return (
@@ -54,6 +64,66 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {catalogues.length > 0 && (
+        <section className="mx-auto flex max-w-[1320px] flex-col gap-12 px-4 pb-24 sm:px-8 lg:pb-32">
+          <SectionHeading
+            eyebrow={dict.home.collectionsEyebrow}
+            title={dict.home.collectionsTitle}
+            link={{ href: localePath(locale, "collections"), label: dict.catalogues.all }}
+          />
+          <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+            {catalogues.map((catalogue) => (
+              <CatalogueCard
+                key={catalogue.id}
+                catalogue={catalogue}
+                locale={locale}
+                pendingLabel={dict.content.photoPending}
+                countLabel={plural(locale, catalogue.modelIds.length, {
+                  one: dict.catalogues.models_one,
+                  other: dict.catalogues.models_other,
+                })}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {themes.length > 0 && (
+        <section className="bg-sand py-24 lg:py-32">
+          <div className="mx-auto flex max-w-[1320px] flex-col gap-12 px-4 sm:px-8">
+            <div className="flex flex-col items-center gap-3 text-center">
+              <span className="eyebrow">{dict.home.themesEyebrow}</span>
+              <h2 className="display text-4xl sm:text-5xl">{dict.home.themesTitle}</h2>
+            </div>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-5 lg:grid-cols-6">
+              {themes.map((theme) => (
+                <ThemeTile
+                  key={theme.id}
+                  theme={theme}
+                  locale={locale}
+                  href={`${galleryHref}?theme=${encodeURIComponent(theme.slug[locale])}`}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {models.length > 0 && (
+        <section className="mx-auto flex max-w-[1320px] flex-col gap-12 px-4 py-24 sm:px-8 lg:py-32">
+          <SectionHeading
+            eyebrow={dict.home.modelsEyebrow}
+            title={dict.home.modelsTitle}
+            link={{ href: galleryHref, label: dict.home.modelsCta }}
+          />
+          <div className="grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-6 lg:grid-cols-4">
+            {models.map((model) => (
+              <ModelCard key={model.id} model={model} locale={locale} themes={themes} pendingLabel={dict.content.photoPending} />
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="bg-ink text-ivory">
         <div className="grid lg:grid-cols-2">
           <PhotoPlaceholder label={dict.content.photoPending} className="min-h-[360px] lg:min-h-[560px]" />
@@ -83,6 +153,20 @@ export default async function HomePage() {
         </div>
       </section>
     </>
+  );
+}
+
+function SectionHeading({ eyebrow, title, link }: { eyebrow: string; title: string; link: { href: string; label: string } }) {
+  return (
+    <div className="flex flex-wrap items-end justify-between gap-4">
+      <div className="flex flex-col gap-3">
+        <span className="eyebrow">{eyebrow}</span>
+        <h2 className="display text-4xl sm:text-5xl">{title}</h2>
+      </div>
+      <Link href={link.href} className="link-underline text-sm uppercase tracking-[0.16em]">
+        {link.label}
+      </Link>
+    </div>
   );
 }
 
