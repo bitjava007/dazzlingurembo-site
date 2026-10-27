@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dazzling Urembo — site vitrine
 
-## Getting Started
+> *Where African heritage meets modern elegance.*
 
-First, run the development server:
+Site officiel de la maison Dazzling Urembo : vitrine bilingue (français / anglais) et espace d'administration
+pour gérer les modèles, catalogues, thématiques et textes du site sans toucher au code.
+
+Projet indépendant de l'ERP de l'atelier : dépôt, base Supabase et hébergement Vercel distincts.
+
+## Stack
+
+| Rôle | Outil |
+| --- | --- |
+| Site public et administration (une seule application) | Next.js 16 (App Router, Cache Components), React 19, TypeScript |
+| Styles | Tailwind CSS 4, polices Cormorant Garamond et Jost servies par `next/font` |
+| Langues | Routage natif `app/[lang]` + dictionnaires JSON, URL traduites par `src/proxy.ts` |
+| Données, authentification, photos | Supabase (à partir de la Phase 4) |
+| Hébergement | Vercel |
+
+## Démarrer en local
+
+Prérequis : Node.js 20.9 ou plus récent.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # puis compléter les valeurs disponibles
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Vérifications :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build && npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Organisation
 
-## Learn More
+```
+src/
+├── proxy.ts                  langue par défaut et URL traduites (/en/models -> dossier /modeles)
+├── i18n/
+│   ├── config.ts             langues, table des routes FR/EN, helpers d'URL
+│   ├── dictionaries.ts       chargement du dictionnaire de la langue courante
+│   └── dictionaries/         textes d'interface fr.json / en.json
+├── app/
+│   ├── [lang]/               site public (layout racine, pages, 404 localisée)
+│   ├── admin/                administration (layout racine séparé, non indexé)
+│   ├── global-not-found.tsx  404 des adresses sans route
+│   ├── robots.ts
+│   └── globals.css           charte : couleurs, typographies, boutons
+├── components/site/          en-tête, pied de page, blocs de page
+└── lib/                      paramètres du site, WhatsApp, métadonnées SEO
+docs/
+└── PHASE-1-PLAN.md           analyse, schéma de données et plan validé
+```
 
-To learn more about Next.js, take a look at the following resources:
+### URL publiques
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Page | Français | Anglais |
+| --- | --- | --- |
+| Accueil | `/fr` | `/en` |
+| Collections | `/fr/collections` | `/en/collections` |
+| Modèles | `/fr/modeles` | `/en/models` |
+| Notre histoire | `/fr/notre-histoire` | `/en/our-story` |
+| Savoir-faire et sur mesure | `/fr/savoir-faire` | `/en/craftsmanship` |
+| Showroom | `/fr/showroom` | `/en/showroom` |
+| Contact | `/fr/contact` | `/en/contact` |
+| Mentions légales | `/fr/mentions-legales` | `/en/legal-notice` |
+| Confidentialité | `/fr/confidentialite` | `/en/privacy` |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`/` redirige vers la langue du navigateur (français par défaut). Une adresse dans la mauvaise langue
+(ex. `/en/modeles`) redirige vers son équivalent canonique (`/en/models`).
 
-## Deploy on Vercel
+## Contenus
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Aucun texte officiel, coordonnée ou photo n'est inventé. Tant qu'un contenu n'est pas fourni :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- les pages affichent un bloc « Contenu en cours de préparation » ;
+- les emplacements de photos sont marqués « Photographie à venir » ;
+- un réseau social, un numéro WhatsApp ou une adresse non configurés ne s'affichent pas.
+
+Les coordonnées se règlent provisoirement dans `.env.local` (voir `.env.example`), puis dans l'administration
+à partir de la Phase 4.
+
+## Avancement
+
+- [x] Phase 1 — Analyse et planification (`docs/PHASE-1-PLAN.md`)
+- [x] Phase 2 — Fondation : Next.js, langues, charte, en-tête, pied de page, 404
+- [ ] Phase 3 — Site public : accueil, collections, galerie, fiches modèles, pages institutionnelles
+- [ ] Phase 4 — Supabase et administration
+- [ ] Phase 5 — Intégration, sécurité, SEO
+- [ ] Phase 6 — Tests, déploiement, guides
