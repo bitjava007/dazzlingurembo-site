@@ -7,13 +7,17 @@ import { hasLocale, localePath } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { getModelBySlug, getModelCatalogues, getModels, getRelatedModels, getThemes } from "@/lib/content";
 import { pick } from "@/lib/content/localize";
+import { EMPTY_SLUG } from "@/lib/content/mappers";
 import { alternatesFor } from "@/lib/metadata";
 import { getSiteSettings } from "@/lib/content/settings";
 
 export async function generateStaticParams() {
   const locale = await lang();
-  if (!locale || !hasLocale(locale)) return [];
-  return (await getModels()).map((m) => ({ slug: m.slug[locale] }));
+  if (!locale || !hasLocale(locale)) return [{ slug: EMPTY_SLUG }];
+  const params = (await getModels()).map((m) => ({ slug: m.slug[locale] }));
+  // Avec Cache Components, la liste ne peut pas être vide : tant qu'aucun contenu n'est publié,
+  // un identifiant réservé (invalide, donc jamais attribué) produit simplement une page 404.
+  return params.length ? params : [{ slug: EMPTY_SLUG }];
 }
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/modeles/[slug]">): Promise<Metadata> {

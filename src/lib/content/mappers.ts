@@ -67,6 +67,9 @@ export function toCatalogue(row: CatalogueRow): Catalogue {
   };
 }
 
+/** Identifiant réservé, volontairement invalide : ne correspond jamais à un contenu. */
+export const EMPTY_SLUG = "_";
+
 /** Un identifiant d'URL valide ne contient que minuscules, chiffres et tirets. */
 export function isSlug(value: string): boolean {
   return /^[a-z0-9]+(-[a-z0-9]+)*$/.test(value) && value.length <= 120;
