@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "siteName": "Dazzling Urembo",
+    "tagline": "Where African heritage meets modern elegance.",
+    "defaultDescription": "Dazzling Urembo, maison de mode : créations en bazin, brocard, sacs, chaussures et accessoires, confection sur mesure."
+  },
+  "nav": {
+    "main": "Navigation principale",
+    "home": "Accueil",
+    "collections": "Collections",
+    "models": "Modèles",
+    "craftsmanship": "Sur mesure",
+    "story": "Notre histoire",
+    "showroom": "Showroom",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "skipToContent": "Aller au contenu"
+  },
+  "language": {
+    "label": "Langue",
+    "switchTo": "English version",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "actions": {
+    "discoverCollections": "Découvrir les collections",
+    "viewGallery": "Voir la galerie",
+    "bookAppointment": "Prendre rendez-vous",
+    "requestCreation": "Demander une création",
+    "whatsapp": "WhatsApp",
+    "chatOnWhatsapp": "Discuter sur WhatsApp",
+    "backHome": "Retour à l'accueil"
+  },
+  "home": {
+    "heroEyebrow": "Dazzling Urembo",
+    "houseEyebrow": "La maison",
+    "houseTitle": "Un héritage textile, une coupe d'aujourd'hui.",
+    "collectionsEyebrow": "Catalogues à la une",
+    "themesEyebrow": "Galerie thématique",
+    "themesTitle": "Explorer par univers",
+    "modelsEyebrow": "Sélection",
+    "modelsTitle": "Créations récentes",
+    "bespokeEyebrow": "Savoir-faire",
+    "bespokeTitle": "Confection sur mesure",
+    "contactTitle": "Une question sur un modèle ? Écrivez-nous directement."
+  },
+  "pages": {
+    "collections": { "title": "Collections", "eyebrow": "Catalogues" },
+    "models": { "title": "Nos créations", "eyebrow": "Galerie" },
+    "story": { "title": "Notre histoire", "eyebrow": "La maison" },
+    "craftsmanship": { "title": "Savoir-faire et confection sur mesure", "eyebrow": "Atelier" },
+    "showroom": { "title": "Showroom", "eyebrow": "Nous rendre visite" },
+    "contact": { "title": "Contact", "eyebrow": "Écrire à la maison" },
+    "legal": { "title": "Mentions légales", "eyebrow": "Informations" },
+    "privacy": { "title": "Politique de confidentialité", "eyebrow": "Informations" }
+  },
+  "content": {
+    "pending": "Contenu en cours de préparation",
+    "pendingText": "Cette section sera complétée avec les textes et photographies officiels de la maison.",
+    "photoPending": "Photographie à venir"
+  },
+  "footer": {
+    "house": "Maison",
+    "showroom": "Showroom",
+    "follow": "Suivre",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "rights": "Tous droits réservés."
+  },
+  "notFound": {
+    "eyebrow": "Erreur 404",
+    "title": "Cette page est introuvable.",
+    "text": "Elle a peut-être été déplacée, ou n'est pas encore publiée."
+  }
+}

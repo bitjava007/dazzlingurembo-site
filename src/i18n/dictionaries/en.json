@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "siteName": "Dazzling Urembo",
+    "tagline": "Where African heritage meets modern elegance.",
+    "defaultDescription": "Dazzling Urembo, fashion house: bazin and brocade creations, bags, shoes and accessories, bespoke tailoring."
+  },
+  "nav": {
+    "main": "Main navigation",
+    "home": "Home",
+    "collections": "Collections",
+    "models": "Creations",
+    "craftsmanship": "Bespoke",
+    "story": "Our story",
+    "showroom": "Showroom",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content"
+  },
+  "language": {
+    "label": "Language",
+    "switchTo": "Version française",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "actions": {
+    "discoverCollections": "Discover the collections",
+    "viewGallery": "View the gallery",
+    "bookAppointment": "Book an appointment",
+    "requestCreation": "Request a creation",
+    "whatsapp": "WhatsApp",
+    "chatOnWhatsapp": "Chat on WhatsApp",
+    "backHome": "Back to home"
+  },
+  "home": {
+    "heroEyebrow": "Dazzling Urembo",
+    "houseEyebrow": "The house",
+    "houseTitle": "A textile heritage, a contemporary cut.",
+    "collectionsEyebrow": "Featured catalogues",
+    "themesEyebrow": "Themed gallery",
+    "themesTitle": "Explore by universe",
+    "modelsEyebrow": "Selection",
+    "modelsTitle": "Recent creations",
+    "bespokeEyebrow": "Craftsmanship",
+    "bespokeTitle": "Bespoke tailoring",
+    "contactTitle": "A question about a creation? Write to us directly."
+  },
+  "pages": {
+    "collections": { "title": "Collections", "eyebrow": "Catalogues" },
+    "models": { "title": "Our creations", "eyebrow": "Gallery" },
+    "story": { "title": "Our story", "eyebrow": "The house" },
+    "craftsmanship": { "title": "Craftsmanship and bespoke tailoring", "eyebrow": "Atelier" },
+    "showroom": { "title": "Showroom", "eyebrow": "Visit us" },
+    "contact": { "title": "Contact", "eyebrow": "Write to the house" },
+    "legal": { "title": "Legal notice", "eyebrow": "Information" },
+    "privacy": { "title": "Privacy policy", "eyebrow": "Information" }
+  },
+  "content": {
+    "pending": "Content in preparation",
+    "pendingText": "This section will be completed with the house's official texts and photographs.",
+    "photoPending": "Photograph coming soon"
+  },
+  "footer": {
+    "house": "House",
+    "showroom": "Showroom",
+    "follow": "Follow",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "This page cannot be found.",
+    "text": "It may have moved, or may not be published yet."
+  }
+}
