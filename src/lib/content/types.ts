@@ -42,6 +42,8 @@ export type Model = {
   images: Picture[];
   themeIds: string[];
   isFeatured: boolean;
+  /** Ordre de mise en avant sur l'accueil (plus petit = premier). */
+  featuredOrder: number | null;
   publishedAt: string;
 };
 
@@ -52,6 +54,7 @@ export type Catalogue = {
   description: OptionalLocalized;
   cover: Picture | null;
   isFeatured: boolean;
+  featuredOrder: number | null;
   /** Modèles dans l'ordre défini par l'administratrice pour ce catalogue. */
   modelIds: string[];
   publishedAt: string;

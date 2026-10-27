@@ -86,6 +86,7 @@ export const demoModels: Model[] = demoModelInputs.map((m) => ({
   images: photos(m.id, m.tones),
   themeIds: m.themes,
   isFeatured: m.featured ?? false,
+  featuredOrder: null,
   publishedAt: `2026-10-${String(m.day).padStart(2, "0")}T10:00:00Z`,
 }));
 
@@ -127,5 +128,6 @@ export const demoCatalogues: Catalogue[] = [
   ...c,
   cover: { id: `${c.id}-cover`, src: null, alt: { fr: null, en: null }, width: 1200, height: 1500, tone },
   isFeatured: true,
+  featuredOrder: i + 1,
   publishedAt: `2026-10-0${i + 1}T10:00:00Z`,
 }));
