@@ -6,7 +6,8 @@ import { Header, type NavItem } from "@/components/site/header";
 import { localePath, locales } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { isDemoContent } from "@/lib/content";
-import { getSiteSettings, siteUrl, whatsappUrl } from "@/lib/site";
+import { getSiteSettings } from "@/lib/content/settings";
+import { siteUrl, whatsappUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));

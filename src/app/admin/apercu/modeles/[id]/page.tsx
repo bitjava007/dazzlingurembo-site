@@ -5,7 +5,7 @@ import { ModelDetail } from "@/components/site/model-detail";
 import { getDictionary } from "@/i18n/dictionaries";
 import { requireAdmin } from "@/lib/admin/auth";
 import { CATALOGUE_SELECT, MODEL_SELECT, toCatalogue, toModel, toTheme, type CatalogueRow, type ModelRow } from "@/lib/content/mappers";
-import { getSiteSettings } from "@/lib/site";
+import { getSiteSettings } from "@/lib/content/settings";
 
 export const metadata: Metadata = { title: "Aperçu d'un modèle", robots: { index: false } };
 

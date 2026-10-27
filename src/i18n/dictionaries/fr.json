@@ -134,5 +134,35 @@
     "frenchOnly": "Ce texte n'est pas encore disponible en anglais.",
     "frenchOnlyLabel": "Version française",
     "loading": "Chargement de la création…"
+  },
+  "details": {
+    "title": "Coordonnées",
+    "address": "Adresse",
+    "hours": "Horaires",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "none": "Les coordonnées seront publiées prochainement."
+  },
+  "contactForm": {
+    "title": "Écrire à la maison",
+    "name": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "reachHint": "Indiquez au moins un e-mail ou un téléphone pour que la maison puisse vous répondre.",
+    "subject": "Objet",
+    "message": "Message",
+    "model": "Modèle concerné",
+    "submit": "Envoyer le message",
+    "sending": "Envoi…",
+    "required": "obligatoire",
+    "success": "Merci, votre message a bien été enregistré. La maison vous répondra dès que possible.",
+    "errors": {
+      "invalid": "Certains champs sont incomplets ou invalides. Vérifiez-les puis réessayez.",
+      "reach": "Indiquez un e-mail ou un téléphone.",
+      "tooFast": "Envoi trop rapide : patientez quelques secondes puis réessayez.",
+      "rateLimited": "Trop de messages ont été envoyés récemment. Réessayez dans une heure ou écrivez-nous sur WhatsApp.",
+      "unavailable": "Votre message n'a pas pu être enregistré. Réessayez plus tard ou contactez-nous directement."
+    },
+    "privacy": "Vos informations servent uniquement à répondre à votre demande."
   }
 }

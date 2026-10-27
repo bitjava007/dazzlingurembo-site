@@ -88,8 +88,8 @@ Aucun texte officiel, coordonnée ou photo n'est inventé. Tant qu'un contenu n'
 - les emplacements de photos sont marqués « Photographie à venir » ;
 - un réseau social, un numéro WhatsApp ou une adresse non configurés ne s'affichent pas.
 
-Les coordonnées se règlent provisoirement dans `.env.local` (voir `.env.example`), puis dans l'administration
-à partir de la Phase 4.
+Textes des pages, coordonnées, WhatsApp et réseaux sociaux se règlent dans l'administration
+(*Pages et contenus*, *Paramètres du site*).
 
 ### Contenus de démonstration
 
@@ -107,5 +107,5 @@ Chaque lecture est mise en cache (`"use cache"`) et étiquetée (`themes`, `mode
 - [x] Phase 2 — Fondation : Next.js, langues, charte, en-tête, pied de page, 404
 - [x] Phase 3 — Site public : accueil, collections, galerie filtrable, fiches modèles (données de démonstration)
 - [x] Phase 4 — Supabase (schéma, RLS, stockage) et administration (`/admin`)
-- [ ] Phase 5 — Intégration, sécurité, SEO
+- [x] Phase 5 — Pages et paramètres depuis la base, formulaire de contact protégé, sitemap (tests avec la base réelle à faire au déploiement)
 - [ ] Phase 6 — Tests, déploiement, guides

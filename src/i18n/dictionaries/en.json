@@ -134,5 +134,35 @@
     "frenchOnly": "This text is not yet available in English.",
     "frenchOnlyLabel": "French version",
     "loading": "Loading creation…"
+  },
+  "details": {
+    "title": "Contact details",
+    "address": "Address",
+    "hours": "Opening hours",
+    "phone": "Phone",
+    "email": "Email",
+    "none": "Contact details will be published soon."
+  },
+  "contactForm": {
+    "title": "Write to the house",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "reachHint": "Give at least an email or a phone number so the house can reply.",
+    "subject": "Subject",
+    "message": "Message",
+    "model": "Creation",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "required": "required",
+    "success": "Thank you, your message has been received. The house will reply as soon as possible.",
+    "errors": {
+      "invalid": "Some fields are incomplete or invalid. Please check them and try again.",
+      "reach": "Please give an email or a phone number.",
+      "tooFast": "Sent too quickly: please wait a few seconds and try again.",
+      "rateLimited": "Too many messages were sent recently. Please try again in an hour or write to us on WhatsApp.",
+      "unavailable": "Your message could not be saved. Please try again later or contact us directly."
+    },
+    "privacy": "Your details are only used to reply to your request."
   }
 }

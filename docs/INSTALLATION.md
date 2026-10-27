@@ -60,6 +60,7 @@ Variables (`.env.local` en local, *Settings → Environment Variables* sur Verce
 | `NEXT_PUBLIC_SITE_URL` | `https://www.dazzlingurembo.com` | oui |
 | `NEXT_PUBLIC_SUPABASE_URL` | `https://<projet>.supabase.co` | oui (prévu) |
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | clé `sb_publishable_…` (*Project Settings → API Keys*) | oui (prévu) |
+| `CONTACT_HASH_SALT` | longue valeur aléatoire (limitation des envois du formulaire) | **non** |
 
 La clé `service_role` / `secret` **n'est utilisée nulle part** et ne doit jamais être ajoutée au projet :
 toute la sécurité repose sur le RLS et la liste des administrateurs.

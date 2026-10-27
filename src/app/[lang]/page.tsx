@@ -7,8 +7,11 @@ import { localePath } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { plural } from "@/i18n/format";
 import { getFeaturedCatalogues, getHomeModels, getThemes } from "@/lib/content";
+import { pick } from "@/lib/content/localize";
+import { RichText } from "@/components/site/rich-text";
 import { alternates } from "@/lib/metadata";
-import { getSiteSettings, whatsappUrl } from "@/lib/site";
+import { getPage, getSiteSettings } from "@/lib/content/settings";
+import { whatsappUrl } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
   return { alternates: alternates(await getLocale(), "home") };
@@ -16,13 +19,17 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function HomePage() {
   const locale = await getLocale();
-  const [dict, settings, catalogues, themes, models] = await Promise.all([
+  const [dict, settings, catalogues, themes, models, homePage, craftPage] = await Promise.all([
     getDictionary(locale),
     getSiteSettings(),
     getFeaturedCatalogues(3),
     getThemes(),
     getHomeModels(4),
+    getPage("home"),
+    getPage("craftsmanship"),
   ]);
+  const intro = pick(homePage.body, locale);
+  const craft = pick(craftPage.body, locale);
   const galleryHref = localePath(locale, "models");
   const [before, after] = splitTagline(dict.meta.tagline);
 
@@ -57,7 +64,7 @@ export default async function HomePage() {
           <h2 className="display text-4xl sm:text-5xl">{dict.home.houseTitle}</h2>
         </div>
         <div className="flex flex-col gap-6 text-lg font-light leading-relaxed text-umber">
-          <p>{dict.content.pendingText}</p>
+          {intro ? <RichText text={intro.text} lang={intro.isFallback ? "fr" : undefined} className="text-lg" /> : <p>{dict.content.pendingText}</p>}
           <Link href={localePath(locale, "story")} className="link-underline self-start text-sm uppercase tracking-[0.16em] text-ink">
             {dict.nav.story}
           </Link>
@@ -130,7 +137,9 @@ export default async function HomePage() {
           <div className="flex max-w-[660px] flex-col justify-center gap-7 px-4 py-20 sm:px-8 lg:px-16">
             <span className="text-xs uppercase tracking-[0.28em] text-gold">{dict.home.bespokeEyebrow}</span>
             <h2 className="display text-4xl sm:text-5xl">{dict.home.bespokeTitle}</h2>
-            <p className="text-lg font-light leading-relaxed text-mist">{dict.content.pendingText}</p>
+            <p className="line-clamp-6 whitespace-pre-line text-lg font-light leading-relaxed text-mist" lang={craft?.isFallback ? "fr" : undefined}>
+              {craft ? craft.text.split(/\n{2,}/).find((b) => !b.startsWith("## ")) : dict.content.pendingText}
+            </p>
             <Link href={localePath(locale, "craftsmanship")} className="btn btn-light self-start">
               {dict.actions.requestCreation}
             </Link>

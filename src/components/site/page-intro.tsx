@@ -11,15 +11,15 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title
 }
 
 /** Bloc affiché tant qu'un contenu officiel n'a pas été fourni par la marque. */
-export function PendingContent({ title, text }: { title: string; text: string }) {
-  return (
-    <section className="mx-auto max-w-[1320px] px-4 pb-24 sm:px-8">
-      <div className="flex max-w-2xl flex-col gap-2 border-l border-gold py-2 pl-6">
-        <p className="text-sm font-medium uppercase tracking-[0.14em] text-taupe">{title}</p>
-        <p className="font-light leading-relaxed text-umber">{text}</p>
-      </div>
-    </section>
+export function PendingContent({ title, text, inline }: { title: string; text: string; inline?: boolean }) {
+  const note = (
+    <div className="flex max-w-2xl flex-col gap-2 border-l border-gold py-2 pl-6">
+      <p className="text-sm font-medium uppercase tracking-[0.14em] text-taupe">{title}</p>
+      <p className="font-light leading-relaxed text-umber">{text}</p>
+    </div>
   );
+  if (inline) return note;
+  return <section className="mx-auto max-w-[1320px] px-4 pb-24 sm:px-8">{note}</section>;
 }
 
 /** Emplacement d'image en attendant les photographies réelles. */

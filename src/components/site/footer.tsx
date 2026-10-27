@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { localePath, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { pick } from "@/lib/content/localize";
 import type { SiteSettings } from "@/lib/site";
 
 type FooterProps = { locale: Locale; dict: Dictionary; settings: SiteSettings };
@@ -12,7 +13,7 @@ export function Footer({ locale, dict, settings }: FooterProps) {
     { label: "TikTok", href: settings.tiktokUrl },
   ].filter((s): s is { label: string; href: string } => Boolean(s.href));
 
-  const showroom = [settings.address, settings.openingHours, settings.phone, settings.contactEmail].filter(
+  const showroom = [settings.address, pick(settings.openingHours, locale)?.text, settings.phone, settings.contactEmail].filter(
     (v): v is string => Boolean(v),
   );
 

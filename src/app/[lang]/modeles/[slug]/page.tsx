@@ -8,7 +8,7 @@ import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { getModelBySlug, getModelCatalogues, getModels, getRelatedModels, getThemes } from "@/lib/content";
 import { pick } from "@/lib/content/localize";
 import { alternatesFor } from "@/lib/metadata";
-import { getSiteSettings } from "@/lib/site";
+import { getSiteSettings } from "@/lib/content/settings";
 
 export async function generateStaticParams() {
   const locale = await lang();
