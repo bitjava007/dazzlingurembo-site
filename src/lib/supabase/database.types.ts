@@ -246,6 +246,7 @@ export type Database = {
           hero_image_path: string | null;
           id: number;
           instagram_url: string | null;
+          maps_url: string | null;
           opening_hours_en: string | null;
           opening_hours_fr: string | null;
           phone: string | null;
@@ -261,6 +262,7 @@ export type Database = {
           hero_image_path?: string | null;
           id?: number;
           instagram_url?: string | null;
+          maps_url?: string | null;
           opening_hours_en?: string | null;
           opening_hours_fr?: string | null;
           phone?: string | null;

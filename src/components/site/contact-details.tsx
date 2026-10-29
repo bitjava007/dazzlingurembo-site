@@ -3,7 +3,7 @@ import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { pick } from "@/lib/content/localize";
 import { whatsappUrl, type SiteSettings } from "@/lib/site";
-import { ChatIcon } from "./icons";
+import { ChatIcon, PinIcon } from "./icons";
 
 /** Coordonnées renseignées dans l'administration ; les champs vides ne s'affichent pas. */
 export function ContactDetails({ locale, dict, settings }: { locale: Locale; dict: Dictionary; settings: SiteSettings }) {
@@ -19,7 +19,7 @@ export function ContactDetails({ locale, dict, settings }: { locale: Locale; dic
   return (
     <section className="flex flex-col gap-5 border-t border-line pt-6">
       <h2 className="eyebrow">{dict.details.title}</h2>
-      {rows.length === 0 && !settings.whatsappNumber ? (
+      {rows.length === 0 && !settings.whatsappNumber && !settings.mapsUrl ? (
         <p className="font-light text-umber">{dict.details.none}</p>
       ) : (
         <dl className="flex flex-col gap-4">
@@ -30,6 +30,12 @@ export function ContactDetails({ locale, dict, settings }: { locale: Locale; dic
             </div>
           ))}
         </dl>
+      )}
+      {settings.mapsUrl && (
+        <a href={settings.mapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline self-start">
+          <PinIcon size={18} />
+          {dict.details.map}
+        </a>
       )}
       {settings.whatsappNumber && (
         <a href={whatsappUrl(settings.whatsappNumber)} target="_blank" rel="noopener noreferrer" className="btn btn-dark self-start">

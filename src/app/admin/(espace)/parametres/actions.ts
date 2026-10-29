@@ -5,8 +5,8 @@ import { requireAdmin } from "@/lib/admin/auth";
 import { checkbox, dbMessage, errorMessage, failure, FormError, success, text, type ActionState } from "@/lib/admin/form";
 import { tags } from "@/lib/content/tags";
 
-function httpsUrl(form: FormData, name: string, label: string) {
-  const value = text(form, name, 300);
+function httpsUrl(form: FormData, name: string, label: string, max = 300) {
+  const value = text(form, name, max);
   if (value && !/^https:\/\/[^\s]+$/.test(value)) throw new FormError(`${label} : saisissez une adresse complète commençant par https://`);
   return value;
 }
@@ -28,6 +28,7 @@ export async function updateSettings(_: ActionState, form: FormData): Promise<Ac
         contact_email: email,
         phone: text(form, "phone", 40),
         address: text(form, "address", 500),
+        maps_url: httpsUrl(form, "maps_url", "Lien Google Maps", 500),
         opening_hours_fr: text(form, "opening_hours_fr", 500),
         opening_hours_en: text(form, "opening_hours_en", 500),
         instagram_url: httpsUrl(form, "instagram_url", "Instagram"),

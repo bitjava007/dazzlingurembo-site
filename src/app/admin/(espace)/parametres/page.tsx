@@ -24,6 +24,15 @@ export default async function SettingsPage() {
         </Panel>
         <Panel title="Showroom">
           <TextArea label="Adresse" name="address" defaultValue={s?.address} rows={3} optional maxLength={500} />
+          <Field
+            label="Lien Google Maps"
+            name="maps_url"
+            type="url"
+            defaultValue={s?.maps_url}
+            placeholder="https://maps.app.goo.gl/…"
+            hint="Dans Google Maps : Partager, puis Copier le lien. Affiche un bouton « Voir sur la carte » sur les pages Showroom et Contact et dans le pied de page."
+            optional
+          />
           <Bilingual label="Horaires" name="opening_hours" fr={s?.opening_hours_fr} en={s?.opening_hours_en} multiline rows={3} optional maxLength={500} />
         </Panel>
         <Panel title="Réseaux sociaux">

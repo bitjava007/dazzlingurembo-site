@@ -10,6 +10,8 @@ export type SiteSettings = {
   contactEmail: string | null;
   phone: string | null;
   address: string | null;
+  /** Lien Google Maps du showroom. */
+  mapsUrl: string | null;
   openingHours: OptionalLocalized;
   instagramUrl: string | null;
   facebookUrl: string | null;
@@ -21,6 +23,7 @@ export const emptySettings: SiteSettings = {
   contactEmail: null,
   phone: null,
   address: null,
+  mapsUrl: null,
   openingHours: { fr: null, en: null },
   instagramUrl: null,
   facebookUrl: null,

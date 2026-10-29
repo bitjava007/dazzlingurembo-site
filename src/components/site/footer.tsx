@@ -40,6 +40,11 @@ export function Footer({ locale, dict, settings }: FooterProps) {
             {showroom.map((line) => (
               <span key={line} className="whitespace-pre-line">{line}</span>
             ))}
+            {settings.mapsUrl && (
+              <a href={settings.mapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-ivory">
+                {dict.details.map} ↗
+              </a>
+            )}
             <Link href={localePath(locale, "showroom")} className="hover:text-ivory">{dict.nav.showroom}</Link>
             <Link href={localePath(locale, "contact")} className="hover:text-ivory">{dict.nav.contact}</Link>
           </div>

@@ -23,6 +23,7 @@ export async function getSiteSettings(): Promise<SiteSettings> {
     contactEmail: data.contact_email,
     phone: data.phone,
     address: data.address,
+    mapsUrl: data.maps_url,
     openingHours: { fr: data.opening_hours_fr, en: data.opening_hours_en },
     instagramUrl: data.instagram_url,
     facebookUrl: data.facebook_url,
