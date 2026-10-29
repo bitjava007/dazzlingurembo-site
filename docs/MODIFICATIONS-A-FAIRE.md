@@ -12,7 +12,8 @@ Point retiré : n° 1, photos libres dans une collection (retiré le 29/10).
 | 5 | **Filigrane du logo, activable** : une case à cocher dans *Paramètres du site* — « Ajouter le logo Dazzling Urembo en filigrane sur les photos ». Cochée : chaque photo envoyée depuis l'administration (photos des modèles, couvertures des catalogues et thématiques) reçoit automatiquement le logo au centre, semi-transparent. Décochée : aucune photo ne reçoit le logo. Logo : version vectorielle `public/brand/logo-blanc.svg` (SVG du graphiste, fond retiré). Réglages proposés : ≈ 15 % d'opacité, ≈ 30 % de la largeur. La case s'applique aux photos envoyées après son changement ; les photos déjà en ligne gardent leur état (à renvoyer si besoin). | Réalisé le 29/10 (colonne `watermark_enabled`, migration 07 appliquée) | Demande du 28/10 |
 | 6 | **Logo officiel sur le site** : remplacer le texte « DAZZLING UREMBO » par le logo dans l'en-tête, le pied de page, la page 404, l'administration (connexion et menu) et l'icône d'onglet (favicon) ; version noire sur fond clair, blanche sur fond sombre. | Réalisé le 29/10 (icône d'onglet : le « D » du logo) | Logos reçus le 29/10 |
 
-| 7 | **Catégories et matières** : galerie organisée en 3 catégories (Vêtements, Sacs, Chaussures ; Accessoires masquée tant qu'il y a peu de produits) avec Bazin et Brocard en filtres de matière ; type « Catégorie / Matière » dans l'administration. | Réalisé le 29/10 | Questionnaire de la fondatrice |
+| 7 | **Catégories et matières** : galerie organisée en 3 catégories (Vêtements, Sacs, Chaussures ; Accessoires masquée tant qu'il y a peu de produits) avec Bazin et Brocard en filtres de matière ; type « Catégorie / Matière » dans l'administration. | Réalisé le 29/10 | Questionnaire de la fondatrice || 8 | **Lien Google Maps du showroom** : ajouter un champ « Lien Google Maps » dans *Paramètres du site* et un bouton « Voir sur la carte » sur la page Showroom et dans le pied de page. Lien reçu : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 | Proposé | Message du 29/10 |
+
 Points proposés, non encore validés :
 
 - Seconde photo au survol des modèles dans la galerie.
@@ -23,7 +24,38 @@ Fichiers du logo (`public/brand/`) :
 - `logo-noir.png` / `logo-blanc.png` : mêmes logos en image 2100 × 720, fond transparent ;
 - `original-logo.svg`, `original-logo-noir-sur-blanc.png`, `original-logo-blanc-sur-noir.png` : fichiers fournis, tels quels.
 
-Contenus du questionnaire de la fondatrice : enregistrés dans la base le 29/10
-(`supabase/content/20261029_questionnaire_fondatrice.sql`, exécuté dans l'éditeur SQL de Supabase).
-Restent à fournir : WhatsApp et e-mail confirmés, adresse et horaires du showroom, année de création,
-mentions légales, traductions anglaises, créations et photos (avec leurs droits).
+## Informations de la fondatrice
+
+Questionnaire de Christelle Matabaro Ndamuso, fondatrice, reçu le 29/10. Contenus validés enregistrés dans la base
+le 29/10 (`supabase/content/20261029_questionnaire_fondatrice.sql`) : textes français des pages Accueil, Notre histoire,
+Savoir-faire et sur mesure, Showroom, Contact ; lien Instagram ; catégories et matières ; catalogues Cowry Majesty,
+Collection Kuba et Nos essentiels (en brouillon).
+
+### Reçu, à publier dès confirmation
+
+| Information | Valeur reçue | Statut |
+| --- | --- | --- |
+| Showroom — localisation | Ngor, Dakar ; lien Google Maps : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 (reçu le 29/10) | Lien reçu ; adresse écrite complète et repère à fournir |
+| WhatsApp | +221 77 833 60 31 | À confirmer comme numéro public |
+| Téléphone affiché | +221 77 833 60 31 | À confirmer pour affichage public |
+| E-mail de contact et du formulaire | matabarochristelle2@gmail.com | Provisoire : adresse personnelle, une adresse dédiée à la marque est envisagée |
+| E-mail données personnelles | matabarochristelle2@gmail.com | Provisoire |
+| Message d'accueil WhatsApp | « Bonjour et bienvenue chez Dazzling Urembo ! Merci de nous écrire. Dites-nous ce que vous recherchez, nous vous répondrons dès que possible. » | Proposé |
+| Signature en français | « L'héritage africain, l'élégance d'aujourd'hui. » | Proposition, à voir selon le rendu |
+| Showroom sur rendez-vous | Préférence : encourager la prise de rendez-vous | À confirmer |
+| Domaine | dazzlingurembo.com | Vérifier s'il est disponible ou déjà acheté, et par qui |
+| Durée de conservation des messages | 12 mois | Proposé |
+| Lecture des messages | La fondatrice et, si besoin, la personne chargée des demandes du site | Proposé |
+| Responsable de la publication | Christelle Matabaro Ndamuso, fondatrice | Sous réserve de validation administrative |
+
+### Encore à fournir
+
+- Adresse écrite complète du showroom et repère ; horaires d'ouverture.
+- Année et lieu officiels de création de la maison (retirés du texte « Notre histoire » en attendant).
+- Liens Facebook et TikTok.
+- Mentions légales : raison sociale, forme juridique, siège, RCCM, identifiant fiscal, droit applicable.
+- Traductions anglaises de tous les textes (à valider par la fondatrice).
+- Créations : noms, descriptions, matières, références, photos ; références des 9 tenues de Cowry Majesty.
+- Photos institutionnelles (ouverture, showroom, confection, portrait) et confirmation des droits à l'image et crédits.
+- Personne(s) ayant accès à l'administration ; adresse e-mail de la marque pour le transfert des comptes techniques.
+- Date de mise en ligne (après validation des textes, visuels et informations obligatoires).
