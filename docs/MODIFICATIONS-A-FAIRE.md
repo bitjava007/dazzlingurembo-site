@@ -22,3 +22,8 @@ Fichiers du logo (`public/brand/`) :
 - `logo-noir.svg` / `logo-blanc.svg` : logo vectoriel, fond transparent, cadré au plus près (à utiliser en priorité) ;
 - `logo-noir.png` / `logo-blanc.png` : mêmes logos en image 2100 × 720, fond transparent ;
 - `original-logo.svg`, `original-logo-noir-sur-blanc.png`, `original-logo-blanc-sur-noir.png` : fichiers fournis, tels quels.
+
+Contenus du questionnaire de la fondatrice : enregistrés dans la base le 29/10
+(`supabase/content/20261029_questionnaire_fondatrice.sql`, exécuté dans l'éditeur SQL de Supabase).
+Restent à fournir : WhatsApp et e-mail confirmés, adresse et horaires du showroom, année de création,
+mentions légales, traductions anglaises, créations et photos (avec leurs droits).
