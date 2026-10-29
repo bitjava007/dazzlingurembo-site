@@ -36,13 +36,14 @@ Collection Kuba et Nos essentiels (en brouillon).
 | Information | Valeur reçue | Statut |
 | --- | --- | --- |
 | Showroom — localisation | Ngor, Dakar ; lien Google Maps : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 (reçu le 29/10) | Lien reçu ; adresse écrite complète et repère à fournir |
-| WhatsApp | +221 77 833 60 31 | À confirmer comme numéro public |
+| WhatsApp | +221 77 833 60 31 | Confirmé le 29/10 (visuel des réseaux de la marque) — à saisir dans Paramètres du site |
 | Téléphone affiché | +221 77 833 60 31 | À confirmer pour affichage public |
 | E-mail de contact et du formulaire | matabarochristelle2@gmail.com | Provisoire : adresse personnelle, une adresse dédiée à la marque est envisagée |
 | E-mail données personnelles | matabarochristelle2@gmail.com | Provisoire |
 | Message d'accueil WhatsApp | « Bonjour et bienvenue chez Dazzling Urembo ! Merci de nous écrire. Dites-nous ce que vous recherchez, nous vous répondrons dès que possible. » | Proposé |
 | Signature en français | « L'héritage africain, l'élégance d'aujourd'hui. » | Proposition, à voir selon le rendu |
 | Showroom sur rendez-vous | Préférence : encourager la prise de rendez-vous | À confirmer |
+| TikTok | @dazzlingurembo → https://www.tiktok.com/@dazzlingurembo | Confirmé le 29/10 — à saisir dans Paramètres du site |
 | Domaine | dazzlingurembo.com | Vérifier s'il est disponible ou déjà acheté, et par qui |
 | Durée de conservation des messages | 12 mois | Proposé |
 | Lecture des messages | La fondatrice et, si besoin, la personne chargée des demandes du site | Proposé |
@@ -52,7 +53,7 @@ Collection Kuba et Nos essentiels (en brouillon).
 
 - Adresse écrite complète du showroom et repère ; horaires d'ouverture.
 - Année et lieu officiels de création de la maison (retirés du texte « Notre histoire » en attendant).
-- Liens Facebook et TikTok.
+- Lien Facebook (page « Dazzling Urembo » confirmée le 29/10, adresse de la page à fournir).
 - Mentions légales : raison sociale, forme juridique, siège, RCCM, identifiant fiscal, droit applicable.
 - Traductions anglaises de tous les textes (à valider par la fondatrice).
 - Créations : noms, descriptions, matières, références, photos ; références des 9 tenues de Cowry Majesty.
