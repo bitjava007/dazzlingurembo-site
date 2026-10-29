@@ -25,14 +25,15 @@ function photos(id: string, tones: PlaceholderTone[]): Picture[] {
 }
 
 export const demoThemes: Theme[] = [
-  { id: "t-bazin", slug: { fr: "bazin", en: "bazin" }, name: { fr: "Bazin", en: "Bazin" } },
-  { id: "t-brocard", slug: { fr: "brocard", en: "brocade" }, name: { fr: "Brocard", en: "Brocade" } },
-  { id: "t-robes", slug: { fr: "robes-et-tenues", en: "dresses-and-outfits" }, name: { fr: "Robes et tenues", en: "Dresses & outfits" } },
-  { id: "t-sacs", slug: { fr: "sacs", en: "bags" }, name: { fr: "Sacs", en: "Bags" } },
-  { id: "t-chaussures", slug: { fr: "chaussures", en: "shoes" }, name: { fr: "Chaussures", en: "Shoes" } },
-  { id: "t-accessoires", slug: { fr: "accessoires", en: "accessories" }, name: { fr: "Accessoires", en: "Accessories" } },
+  { id: "t-robes", kind: "category", slug: { fr: "vetements", en: "clothing" }, name: { fr: "Vêtements", en: "Clothing" } },
+  { id: "t-sacs", kind: "category", slug: { fr: "sacs", en: "bags" }, name: { fr: "Sacs", en: "Bags" } },
+  { id: "t-chaussures", kind: "category", slug: { fr: "chaussures", en: "shoes" }, name: { fr: "Chaussures", en: "Shoes" } },
+  { id: "t-accessoires", kind: "category", slug: { fr: "accessoires", en: "accessories" }, name: { fr: "Accessoires", en: "Accessories" } },
+  { id: "t-bazin", kind: "material", slug: { fr: "bazin", en: "bazin" }, name: { fr: "Bazin", en: "Bazin" } },
+  { id: "t-brocard", kind: "material", slug: { fr: "brocard", en: "brocade" }, name: { fr: "Brocard", en: "Brocade" } },
 ].map((t, i): Theme => ({
   ...t,
+  kind: t.kind as Theme["kind"],
   description: { fr: null, en: null },
   cover: { id: `${t.id}-cover`, src: null, alt: { fr: null, en: null }, width: 900, height: 1200, tone: (["umber", "linen", "night", "sand", "earth", "linen"] as const)[i] },
   position: i + 1,

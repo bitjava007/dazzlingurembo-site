@@ -37,7 +37,7 @@
     "houseEyebrow": "The house",
     "houseTitle": "A textile heritage, a contemporary cut.",
     "collectionsEyebrow": "Featured catalogues",
-    "themesEyebrow": "Themed gallery",
+    "themesEyebrow": "Gallery",
     "themesTitle": "Explore by universe",
     "modelsEyebrow": "Selection",
     "modelsTitle": "Recent creations",
@@ -103,7 +103,9 @@
     "banner": "Preview with demonstration content — creations, catalogues and photos will be replaced by official content."
   },
   "gallery": {
-    "filterLabel": "Filter by theme",
+    "filterLabel": "Filter creations",
+    "materialLabel": "Fabric",
+    "allMaterials": "All fabrics",
     "all": "All",
     "count_one": "{n} creation",
     "count_other": "{n} creations",

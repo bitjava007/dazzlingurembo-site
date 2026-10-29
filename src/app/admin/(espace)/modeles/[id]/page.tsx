@@ -20,7 +20,7 @@ export default async function EditModelPage({ params }: PageProps<"/admin/modele
 
   const [modelRes, themesRes, cataloguesRes] = await Promise.all([
     supabase.from("models").select("*, model_images(*), model_themes(theme_id), catalogue_models(catalogue_id)").eq("id", id).maybeSingle(),
-    supabase.from("themes").select("id, name_fr, status").order("position"),
+    supabase.from("themes").select("id, name_fr, kind, status").order("kind").order("position"),
     supabase.from("catalogues").select("id, title_fr, status").order("title_fr"),
   ]);
   const model = modelRes.data;
@@ -88,7 +88,7 @@ export default async function EditModelPage({ params }: PageProps<"/admin/modele
             <fieldset className="flex flex-col">
               <legend className="sr-only">Thématiques du modèle</legend>
               {(themesRes.data ?? []).map((t) => (
-                <Checkbox key={t.id} name="themes" value={t.id} label={t.name_fr} hint={t.status !== "published" ? "Thématique masquée" : undefined} defaultChecked={themeIds.includes(t.id)} />
+                <Checkbox key={t.id} name="themes" value={t.id} label={t.name_fr} hint={[t.kind === "material" ? "Matière" : "Catégorie", t.status !== "published" && "masquée"].filter(Boolean).join(" · ")} defaultChecked={themeIds.includes(t.id)} />
               ))}
             </fieldset>
           </Panel>

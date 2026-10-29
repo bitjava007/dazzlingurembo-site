@@ -2,12 +2,12 @@ import Image from "next/image";
 import type { Picture, PlaceholderTone } from "@/lib/content/types";
 
 const toneClasses: Record<PlaceholderTone, string> = {
-  deep: "bg-[#2b2622] text-mist",
-  night: "bg-[#1c1915] text-mist",
-  umber: "bg-[#3b342d] text-mist",
-  earth: "bg-[#4a4138] text-mist",
-  sand: "bg-[#d6cab5] text-umber",
-  linen: "bg-[#e4dbcc] text-umber",
+  deep: "bg-[#5a463a] text-mist",
+  night: "bg-[#3a2c24] text-mist",
+  umber: "bg-[#6b5446] text-mist",
+  earth: "bg-[#5e5b47] text-mist",
+  sand: "bg-[#d8c8b5] text-umber",
+  linen: "bg-[#e8ded1] text-umber",
 };
 
 type PhotoProps = {

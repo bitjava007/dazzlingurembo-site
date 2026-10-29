@@ -23,6 +23,7 @@ function picture(id: string, path: string | null, alt: { fr: string | null; en: 
 export function toTheme(row: TableRow<"themes">): Theme {
   return {
     id: row.id,
+    kind: row.kind,
     slug: { fr: row.slug_fr, en: row.slug_en },
     name: { fr: row.name_fr, en: row.name_en },
     description: { fr: row.description_fr, en: row.description_en },

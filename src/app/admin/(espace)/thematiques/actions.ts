@@ -13,6 +13,7 @@ function themeFields(form: FormData) {
     name_en: text(form, "name_en", 120),
     description_fr: text(form, "description_fr", 2000),
     description_en: text(form, "description_en", 2000),
+    kind: form.get("kind") === "material" ? ("material" as const) : ("category" as const),
     position: integer(form, "position") ?? 0,
     // Une thématique est soit publiée, soit masquée (brouillon).
     status: form.get("visible") === "on" ? ("published" as const) : ("draft" as const),

@@ -56,7 +56,7 @@ export function Footer({ locale, dict, settings }: FooterProps) {
           )}
         </div>
 
-        <div className="flex flex-wrap justify-between gap-4 border-t border-[#2e2a24] pt-6 text-xs text-stone">
+        <div className="flex flex-wrap justify-between gap-4 border-t border-ink-soft pt-6 text-xs text-stone">
           <span>© Dazzling Urembo. {dict.footer.rights}</span>
           <span className="flex flex-wrap gap-6">
             <Link href={localePath(locale, "legal")} className="hover:text-ivory">{dict.footer.legal}</Link>

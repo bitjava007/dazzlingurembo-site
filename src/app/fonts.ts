@@ -1,5 +1,6 @@
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 
+/** Titres : Cormorant Garamond. Textes : Manrope (choix de la fondatrice). */
 export const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -8,11 +9,11 @@ export const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-export const jost = Jost({
+export const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  variable: "--font-jost",
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
-export const fontVariables = `${cormorant.variable} ${jost.variable}`;
+export const fontVariables = `${cormorant.variable} ${manrope.variable}`;

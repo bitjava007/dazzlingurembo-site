@@ -12,7 +12,7 @@ Projet indépendant de l'ERP de l'atelier : dépôt, base Supabase et hébergeme
 | Rôle | Outil |
 | --- | --- |
 | Site public et administration (une seule application) | Next.js 16 (App Router, Cache Components), React 19, TypeScript |
-| Styles | Tailwind CSS 4, polices Cormorant Garamond et Jost servies par `next/font` |
+| Styles | Tailwind CSS 4, polices Cormorant Garamond (titres) et Manrope (textes) servies par `next/font` |
 | Langues | Routage natif `app/[lang]` + dictionnaires JSON, URL traduites par `src/proxy.ts` |
 | Données, authentification, photos | Supabase (PostgreSQL + RLS, Auth par lien e-mail, Storage) |
 | Hébergement | Vercel |

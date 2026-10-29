@@ -23,6 +23,8 @@ export type Picture = {
 
 export type Theme = {
   id: string;
+  /** « category » : grande catégorie (Vêtements, Sacs…) ; « material » : filtre de matière (Bazin…). */
+  kind: "category" | "material";
   slug: Slugs;
   name: Localized;
   description: OptionalLocalized;

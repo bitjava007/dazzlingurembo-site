@@ -1,25 +1,32 @@
 @import "tailwindcss";
 
 /*
- * Charte Dazzling Urembo : noir profond, ivoire, or champagne en accent discret.
- * Le site garde la même palette quel que soit le thème du système (choix de marque).
- * Contrastes vérifiés : texte or sur ivoire = gold-deep (≥ 5:1), or sur noir = gold.
+ * Charte Dazzling Urembo (choix de la fondatrice, questionnaire du 29/10) : palette naturelle.
+ *   Ivoire nude #F5F0E8 · Beige sable #D8C8B5 · Grège #A99B8B · Kaki olive #77745B
+ *   Terracotta #B66D50 · Brun cacao #49372D
+ * L'ivoire et le beige dominent, le brun cacao porte les textes ; kaki et terracotta par petites touches.
+ * Les noms de jetons historiques sont conservés (ink = brun cacao, gold = accent terracotta).
+ * Nuances dérivées pour la lisibilité (contraste ≥ 4,5:1) : taupe, gold-deep (terracotta foncé),
+ * gold (terracotta clair, pour les fonds bruns), sand et line (beige éclairci).
  */
 @theme {
-  --color-ink: #0e0d0b;
-  --color-ink-soft: #1c1915;
-  --color-umber: #3d3830;
-  --color-taupe: #6b6358;
-  --color-stone: #9a9083;
-  --color-line: #e6ded0;
-  --color-sand: #f2ece1;
-  --color-ivory: #fbf8f2;
-  --color-mist: #d9cfbe;
-  --color-gold: #c9ae78;
-  --color-gold-deep: #6e5730;
+  --color-ink: #49372d;
+  --color-ink-soft: #5a463a;
+  --color-ink-deep: #3a2c24;
+  --color-umber: #5c4a3f;
+  --color-taupe: #6e6152;
+  --color-stone: #a99b8b;
+  --color-line: #e3d8c9;
+  --color-sand: #eae0d3;
+  --color-ivory: #f5f0e8;
+  --color-mist: #d8c8b5;
+  --color-gold: #e0a88e;
+  --color-gold-deep: #9a563c;
+  --color-terracotta: #b66d50;
+  --color-khaki: #77745b;
 
   --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-sans: var(--font-jost), "Jost", system-ui, sans-serif;
+  --font-sans: var(--font-manrope), "Manrope", system-ui, sans-serif;
 
   --tracking-label: 0.18em;
   --tracking-wordmark: 0.28em;
@@ -45,7 +52,7 @@
   }
 
   ::selection {
-    background: var(--color-gold);
+    background: var(--color-mist);
     color: var(--color-ink);
   }
 }

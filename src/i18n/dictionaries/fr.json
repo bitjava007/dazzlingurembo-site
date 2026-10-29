@@ -37,7 +37,7 @@
     "houseEyebrow": "La maison",
     "houseTitle": "Un héritage textile, une coupe d'aujourd'hui.",
     "collectionsEyebrow": "Catalogues à la une",
-    "themesEyebrow": "Galerie thématique",
+    "themesEyebrow": "Galerie",
     "themesTitle": "Explorer par univers",
     "modelsEyebrow": "Sélection",
     "modelsTitle": "Créations récentes",
@@ -103,7 +103,9 @@
     "banner": "Aperçu avec contenus de démonstration — modèles, catalogues et photos seront remplacés par les contenus officiels."
   },
   "gallery": {
-    "filterLabel": "Filtrer par thématique",
+    "filterLabel": "Filtrer les créations",
+    "materialLabel": "Matière",
+    "allMaterials": "Toutes matières",
     "all": "Toutes",
     "count_one": "{n} création",
     "count_other": "{n} créations",

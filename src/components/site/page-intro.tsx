@@ -32,7 +32,7 @@ export function PhotoPlaceholder({
   tone?: "dark" | "light";
   className?: string;
 }) {
-  const colors = tone === "dark" ? "bg-[#2b2622] text-mist" : "bg-[#d6cab5] text-umber";
+  const colors = tone === "dark" ? "bg-ink-deep text-mist" : "bg-mist text-umber";
   return (
     <div className={`flex items-end p-4 ${colors} ${className}`} role="img" aria-label={label}>
       <span className="text-[0.6875rem] uppercase tracking-[0.18em]" aria-hidden="true">

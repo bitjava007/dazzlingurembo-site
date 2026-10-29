@@ -279,6 +279,7 @@ export type Database = {
           description_en: string | null;
           description_fr: string | null;
           id: string;
+          kind: ThemeKind;
           name_en: string | null;
           name_fr: string;
           position: number;
@@ -293,6 +294,7 @@ export type Database = {
           description_en?: string | null;
           description_fr?: string | null;
           id?: string;
+          kind?: ThemeKind;
           name_en?: string | null;
           name_fr: string;
           position?: number;
@@ -333,4 +335,7 @@ export type Database = {
 };
 
 export type ContentStatusValue = ContentStatus;
+/** Niveau d'une thématique : catégorie de navigation ou filtre de matière. */
+export type ThemeKind = "category" | "material";
+
 export type TableRow<T extends keyof Database["public"]["Tables"]> = Database["public"]["Tables"][T]["Row"];

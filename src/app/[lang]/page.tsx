@@ -28,10 +28,14 @@ export default async function HomePage() {
     getPage("home"),
     getPage("craftsmanship"),
   ]);
+  const categories = themes.filter((t) => t.kind === "category");
   const intro = pick(homePage.body, locale);
   const craft = pick(craftPage.body, locale);
   const galleryHref = localePath(locale, "models");
-  const [before, after] = splitTagline(dict.meta.tagline);
+  // Titre d'ouverture saisi dans l'administration (Pages > Accueil > titre), sinon la signature.
+  // Pas de repli vers l'autre langue : sans traduction, la signature reste affichée.
+  const heroTitle = homePage.title[locale]?.trim() || dict.meta.tagline;
+  const [before, after] = splitTagline(heroTitle);
 
   return (
     <>
@@ -95,15 +99,15 @@ export default async function HomePage() {
         </section>
       )}
 
-      {themes.length > 0 && (
+      {categories.length > 0 && (
         <section className="bg-sand py-24 lg:py-32">
           <div className="mx-auto flex max-w-[1320px] flex-col gap-12 px-4 sm:px-8">
             <div className="flex flex-col items-center gap-3 text-center">
               <span className="eyebrow">{dict.home.themesEyebrow}</span>
               <h2 className="display text-4xl sm:text-5xl">{dict.home.themesTitle}</h2>
             </div>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-5 lg:grid-cols-6">
-              {themes.map((theme) => (
+            <div className="mx-auto grid w-full max-w-5xl grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6">
+              {categories.map((theme) => (
                 <ThemeTile
                   key={theme.id}
                   theme={theme}
@@ -179,7 +183,7 @@ function SectionHeading({ eyebrow, title, link }: { eyebrow: string; title: stri
   );
 }
 
-/** Met en valeur la fin de la signature (« modern elegance. »). */
+/** Met en valeur la fin du titre (« modern elegance. », « vous ressemble. »). */
 function splitTagline(tagline: string): [string, string] {
   const words = tagline.split(" ");
   return [words.slice(0, -2).join(" "), words.slice(-2).join(" ")];

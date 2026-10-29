@@ -10,13 +10,13 @@ const themeLabels = { published: "Visible", draft: "Masquée", archived: "Masqu�
 
 export default async function ThemesPage() {
   const { supabase } = await requireAdmin();
-  const { data, error } = await supabase.from("themes").select("id, name_fr, name_en, status, position, model_themes(model_id)").order("position").order("name_fr");
+  const { data, error } = await supabase.from("themes").select("id, name_fr, name_en, kind, status, position, model_themes(model_id)").order("position").order("name_fr");
 
   return (
     <>
       <PageHeader title="Thématiques" actions={<ButtonLink href="/admin/thematiques/nouveau">Nouvelle thématique</ButtonLink>} />
       <Flash />
-      <p className="text-sm text-taupe">Les thématiques organisent la galerie (Bazin, Sacs…). Un modèle peut appartenir à plusieurs thématiques.</p>
+      <p className="text-sm text-taupe">Les catégories (Vêtements, Sacs, Chaussures…) organisent la galerie et l&apos;accueil ; les matières (Bazin, Brocard…) servent de filtres à l&apos;intérieur. Un modèle peut avoir plusieurs catégories et matières.</p>
       {error ? (
         <EmptyState>La liste n&apos;a pas pu être chargée. Rechargez la page.</EmptyState>
       ) : !data.length ? (
@@ -30,7 +30,7 @@ export default async function ThemesPage() {
                 <span className="flex min-w-0 flex-1 flex-col">
                   <span className="font-medium">{t.name_fr}</span>
                   <span className="text-xs text-taupe">
-                    {[t.name_en && `EN : ${t.name_en}`, `${t.model_themes.length} modèle(s)`].filter(Boolean).join(" · ")}
+                    {[t.kind === "material" ? "Matière" : "Catégorie", t.name_en && `EN : ${t.name_en}`, `${t.model_themes.length} modèle(s)`].filter(Boolean).join(" · ")}
                   </span>
                 </span>
                 <StatusBadge status={t.status} labels={themeLabels} />
