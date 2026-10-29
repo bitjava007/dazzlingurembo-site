@@ -35,11 +35,11 @@ Collection Kuba et Nos essentiels (en brouillon).
 
 | Information | Valeur reçue | Statut |
 | --- | --- | --- |
-| Showroom — localisation | Ngor, Dakar ; lien Google Maps : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 | Lien en ligne (bouton « Voir sur la carte ») ; adresse écrite complète et repère à fournir |
+| Showroom — adresse | Ngor Almadies, Dakar, Sénégal ; lien Google Maps : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 | Confirmé le 29/10 — en ligne (adresse et bouton « Voir sur la carte ») |
 | WhatsApp | +221 77 833 60 31 | Confirmé le 29/10 (visuel des réseaux de la marque) — en ligne |
 | Téléphone affiché | +221 77 833 60 31 | Confirmé le 29/10 (appels et WhatsApp) — en ligne |
-| E-mail de contact et du formulaire | matabarochristelle2@gmail.com | Provisoire : adresse personnelle, une adresse dédiée à la marque est envisagée |
-| E-mail données personnelles | matabarochristelle2@gmail.com | Provisoire |
+| E-mail de contact | dazzlingurembo@outlook.com | Confirmé le 29/10 — en ligne |
+| E-mail données personnelles | dazzlingurembo@outlook.com (proposé, adresse de la marque) | À confirmer avec les mentions légales |
 | Message d'accueil WhatsApp | « Bonjour et bienvenue chez Dazzling Urembo ! Merci de nous écrire. Dites-nous ce que vous recherchez, nous vous répondrons dès que possible. » | Proposé |
 | Signature en français | « L'héritage africain, l'élégance d'aujourd'hui. » | Proposition, à voir selon le rendu |
 | Showroom sur rendez-vous | Préférence : encourager la prise de rendez-vous | À confirmer |
@@ -52,8 +52,8 @@ Collection Kuba et Nos essentiels (en brouillon).
 
 ### Encore à fournir
 
-- Adresse écrite complète du showroom et repère ; horaires d'ouverture.
-- Année et lieu officiels de création de la maison (retirés du texte « Notre histoire » en attendant).
+- Horaires d'ouverture du showroom.
+- Lieu officiel de création de la maison (année confirmée : 2016, ajoutée au texte « Notre histoire » le 29/10).
 - Mentions légales : raison sociale, forme juridique, siège, RCCM, identifiant fiscal, droit applicable.
 - Traductions anglaises de tous les textes (à valider par la fondatrice).
 - Créations : noms, descriptions, matières, références, photos ; références des 9 tenues de Cowry Majesty.
