@@ -55,7 +55,7 @@ Collection Kuba et Nos essentiels (en brouillon).
 ### Encore à fournir
 
 - Mentions légales : raison sociale, forme juridique, siège, RCCM, identifiant fiscal, droit applicable.
-- Traductions anglaises de tous les textes (à valider par la fondatrice).
+- Relecture des traductions anglaises par la fondatrice (traduites et en ligne le 29/10 : pages, titre d'ouverture, catégories, matières, catalogues).
 - Créations : noms, descriptions, matières, références, photos ; références des 9 tenues de Cowry Majesty.
 - Photos institutionnelles (ouverture, showroom, confection, portrait) et confirmation des droits à l'image et crédits.
 - Personne(s) ayant accès à l'administration ; adresse e-mail de la marque pour le transfert des comptes techniques.
