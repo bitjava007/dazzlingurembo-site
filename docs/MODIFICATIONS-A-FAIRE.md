@@ -39,6 +39,7 @@ Collection Kuba et Nos essentiels (en brouillon).
 | WhatsApp | +221 77 833 60 31 | Confirmé le 29/10 (visuel des réseaux de la marque) — en ligne |
 | Téléphone affiché | +221 77 833 60 31 | Confirmé le 29/10 (appels et WhatsApp) — en ligne |
 | Création de la maison | 2016, à Ngor Almadies (Dakar), au showroom | Confirmé le 29/10 — en ligne (« Notre histoire ») |
+| Horaires du showroom | Du lundi au samedi, de 9 h à 17 h 30 | Confirmé le 29/10 — en ligne |
 | E-mail de contact | dazzlingurembo@outlook.com | Confirmé le 29/10 — en ligne |
 | E-mail données personnelles | dazzlingurembo@outlook.com (proposé, adresse de la marque) | À confirmer avec les mentions légales |
 | Message d'accueil WhatsApp | « Bonjour et bienvenue chez Dazzling Urembo ! Merci de nous écrire. Dites-nous ce que vous recherchez, nous vous répondrons dès que possible. » | Proposé |
@@ -53,7 +54,6 @@ Collection Kuba et Nos essentiels (en brouillon).
 
 ### Encore à fournir
 
-- Jours d'ouverture du showroom (horaires confirmés : 9 h – 17 h 30, en ligne depuis le 29/10).
 - Mentions légales : raison sociale, forme juridique, siège, RCCM, identifiant fiscal, droit applicable.
 - Traductions anglaises de tous les textes (à valider par la fondatrice).
 - Créations : noms, descriptions, matières, références, photos ; références des 9 tenues de Cowry Majesty.
