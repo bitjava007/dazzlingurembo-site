@@ -12,7 +12,7 @@ Point retiré : n° 1, photos libres dans une collection (retiré le 29/10).
 | 5 | **Filigrane du logo, activable** : une case à cocher dans *Paramètres du site* — « Ajouter le logo Dazzling Urembo en filigrane sur les photos ». Cochée : chaque photo envoyée depuis l'administration (photos des modèles, couvertures des catalogues et thématiques) reçoit automatiquement le logo au centre, semi-transparent. Décochée : aucune photo ne reçoit le logo. Logo : version vectorielle `public/brand/logo-blanc.svg` (SVG du graphiste, fond retiré). Réglages proposés : ≈ 15 % d'opacité, ≈ 30 % de la largeur. La case s'applique aux photos envoyées après son changement ; les photos déjà en ligne gardent leur état (à renvoyer si besoin). | Réalisé le 29/10 (colonne `watermark_enabled`, migration 07 appliquée) | Demande du 28/10 |
 | 6 | **Logo officiel sur le site** : remplacer le texte « DAZZLING UREMBO » par le logo dans l'en-tête, le pied de page, la page 404, l'administration (connexion et menu) et l'icône d'onglet (favicon) ; version noire sur fond clair, blanche sur fond sombre. | Réalisé le 29/10 (icône d'onglet : le « D » du logo) | Logos reçus le 29/10 |
 
-| 7 | **Catégories et matières** : galerie organisée en 3 catégories (Vêtements, Sacs, Chaussures ; Accessoires masquée tant qu'il y a peu de produits) avec Bazin et Brocard en filtres de matière ; type « Catégorie / Matière » dans l'administration. | Réalisé le 29/10 | Questionnaire de la fondatrice || 8 | **Lien Google Maps du showroom** : ajouter un champ « Lien Google Maps » dans *Paramètres du site* et un bouton « Voir sur la carte » sur la page Showroom et dans le pied de page. Lien reçu : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 | Réalisé le 29/10 (lien à coller dans Paramètres du site) | Message du 29/10 |
+| 7 | **Catégories et matières** : galerie organisée en 3 catégories (Vêtements, Sacs, Chaussures ; Accessoires masquée tant qu'il y a peu de produits) avec Bazin et Brocard en filtres de matière ; type « Catégorie / Matière » dans l'administration. | Réalisé le 29/10 | Questionnaire de la fondatrice || 8 | **Lien Google Maps du showroom** : ajouter un champ « Lien Google Maps » dans *Paramètres du site* et un bouton « Voir sur la carte » sur la page Showroom et dans le pied de page. Lien reçu : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 | Réalisé le 29/10 (lien en ligne) | Message du 29/10 |
 
 Points proposés, non encore validés :
 
@@ -35,16 +35,16 @@ Collection Kuba et Nos essentiels (en brouillon).
 
 | Information | Valeur reçue | Statut |
 | --- | --- | --- |
-| Showroom — localisation | Ngor, Dakar ; lien Google Maps : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 (reçu le 29/10) | Lien reçu ; adresse écrite complète et repère à fournir |
-| WhatsApp | +221 77 833 60 31 | Confirmé le 29/10 (visuel des réseaux de la marque) — à saisir dans Paramètres du site |
-| Téléphone affiché | +221 77 833 60 31 | Confirmé le 29/10 (appels et WhatsApp) — à saisir dans Paramètres du site |
+| Showroom — localisation | Ngor, Dakar ; lien Google Maps : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 | Lien en ligne (bouton « Voir sur la carte ») ; adresse écrite complète et repère à fournir |
+| WhatsApp | +221 77 833 60 31 | Confirmé le 29/10 (visuel des réseaux de la marque) — en ligne |
+| Téléphone affiché | +221 77 833 60 31 | Confirmé le 29/10 (appels et WhatsApp) — en ligne |
 | E-mail de contact et du formulaire | matabarochristelle2@gmail.com | Provisoire : adresse personnelle, une adresse dédiée à la marque est envisagée |
 | E-mail données personnelles | matabarochristelle2@gmail.com | Provisoire |
 | Message d'accueil WhatsApp | « Bonjour et bienvenue chez Dazzling Urembo ! Merci de nous écrire. Dites-nous ce que vous recherchez, nous vous répondrons dès que possible. » | Proposé |
 | Signature en français | « L'héritage africain, l'élégance d'aujourd'hui. » | Proposition, à voir selon le rendu |
 | Showroom sur rendez-vous | Préférence : encourager la prise de rendez-vous | À confirmer |
-| TikTok | @dazzlingurembo → https://www.tiktok.com/@dazzlingurembo | Confirmé le 29/10 — à saisir dans Paramètres du site |
-| Facebook | https://www.facebook.com/dazzlingurembo | Confirmé le 29/10 — à saisir dans Paramètres du site |
+| TikTok | @dazzlingurembo → https://www.tiktok.com/@dazzlingurembo | Confirmé le 29/10 — en ligne |
+| Facebook | https://www.facebook.com/dazzlingurembo | Confirmé le 29/10 — en ligne |
 | Domaine | dazzlingurembo.com | Vérifier s'il est disponible ou déjà acheté, et par qui |
 | Durée de conservation des messages | 12 mois | Proposé |
 | Lecture des messages | La fondatrice et, si besoin, la personne chargée des demandes du site | Proposé |
