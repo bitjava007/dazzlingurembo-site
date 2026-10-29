@@ -44,6 +44,7 @@ Collection Kuba et Nos essentiels (en brouillon).
 | Signature en français | « L'héritage africain, l'élégance d'aujourd'hui. » | Proposition, à voir selon le rendu |
 | Showroom sur rendez-vous | Préférence : encourager la prise de rendez-vous | À confirmer |
 | TikTok | @dazzlingurembo → https://www.tiktok.com/@dazzlingurembo | Confirmé le 29/10 — à saisir dans Paramètres du site |
+| Facebook | https://www.facebook.com/dazzlingurembo | Confirmé le 29/10 — à saisir dans Paramètres du site |
 | Domaine | dazzlingurembo.com | Vérifier s'il est disponible ou déjà acheté, et par qui |
 | Durée de conservation des messages | 12 mois | Proposé |
 | Lecture des messages | La fondatrice et, si besoin, la personne chargée des demandes du site | Proposé |
@@ -53,7 +54,6 @@ Collection Kuba et Nos essentiels (en brouillon).
 
 - Adresse écrite complète du showroom et repère ; horaires d'ouverture.
 - Année et lieu officiels de création de la maison (retirés du texte « Notre histoire » en attendant).
-- Lien Facebook (page « Dazzling Urembo » confirmée le 29/10, adresse de la page à fournir).
 - Mentions légales : raison sociale, forme juridique, siège, RCCM, identifiant fiscal, droit applicable.
 - Traductions anglaises de tous les textes (à valider par la fondatrice).
 - Créations : noms, descriptions, matières, références, photos ; références des 9 tenues de Cowry Majesty.
