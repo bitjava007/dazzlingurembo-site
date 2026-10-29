@@ -37,7 +37,7 @@ Collection Kuba et Nos essentiels (en brouillon).
 | --- | --- | --- |
 | Showroom — localisation | Ngor, Dakar ; lien Google Maps : https://maps.app.goo.gl/jFwfMHAB1wn22wkG7 (reçu le 29/10) | Lien reçu ; adresse écrite complète et repère à fournir |
 | WhatsApp | +221 77 833 60 31 | Confirmé le 29/10 (visuel des réseaux de la marque) — à saisir dans Paramètres du site |
-| Téléphone affiché | +221 77 833 60 31 | À confirmer pour affichage public |
+| Téléphone affiché | +221 77 833 60 31 | Confirmé le 29/10 (appels et WhatsApp) — à saisir dans Paramètres du site |
 | E-mail de contact et du formulaire | matabarochristelle2@gmail.com | Provisoire : adresse personnelle, une adresse dédiée à la marque est envisagée |
 | E-mail données personnelles | matabarochristelle2@gmail.com | Provisoire |
 | Message d'accueil WhatsApp | « Bonjour et bienvenue chez Dazzling Urembo ! Merci de nous écrire. Dites-nous ce que vous recherchez, nous vous répondrons dès que possible. » | Proposé |
