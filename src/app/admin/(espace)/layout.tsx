@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { signOut } from "../connexion/actions";
 import { AdminNav } from "@/components/admin/client";
+import { Logo } from "@/components/brand/logo";
 import { requireAdmin } from "@/lib/admin/auth";
 
 /**
@@ -23,8 +24,8 @@ async function AdminShell({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-dvh flex-col lg:flex-row">
       <aside className="flex shrink-0 flex-col gap-6 bg-ink px-4 py-5 text-mist lg:sticky lg:top-0 lg:h-dvh lg:w-64 lg:py-8">
         <div className="flex items-center justify-between gap-4 lg:flex-col lg:items-start">
-          <Link href="/admin" className="flex flex-col">
-            <span className="font-serif text-lg tracking-[0.22em] text-ivory">DAZZLING UREMBO</span>
+          <Link href="/admin" className="flex flex-col gap-2">
+            <Logo className="h-10 self-start text-ivory lg:h-12" title="Dazzling Urembo — tableau de bord" />
             <span className="text-[0.6875rem] uppercase tracking-[0.2em] text-stone">Administration</span>
           </Link>
         </div>

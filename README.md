@@ -39,7 +39,7 @@ npm run build && npm start
 
 ```
 src/
-├── proxy.ts                  langue par défaut et URL traduites (/en/models -> dossier /modeles)
+├── proxy.ts                  français par défaut et URL traduites (/en/models -> dossier /modeles)
 ├── i18n/
 │   ├── config.ts             langues, table des routes FR/EN, helpers d'URL
 │   ├── dictionaries.ts       chargement du dictionnaire de la langue courante
@@ -77,7 +77,7 @@ docs/
 | Mentions légales | `/fr/mentions-legales` | `/en/legal-notice` |
 | Confidentialité | `/fr/confidentialite` | `/en/privacy` |
 
-`/` redirige vers la langue du navigateur (français par défaut). Une adresse dans la mauvaise langue
+`/` redirige toujours vers la version française ; l'anglais s'ouvre avec le sélecteur FR / EN. Une adresse dans la mauvaise langue
 (ex. `/en/modeles`) redirige vers son équivalent canonique (`/en/models`).
 
 ## Contenus

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ACCEPT_ATTRIBUTE, prepareImage, removeFromStorage, UploadError, uploadToStorage } from "@/lib/admin/image-upload";
+import { ACCEPT_ATTRIBUTE, loadWatermark, prepareImage, removeFromStorage, UploadError, uploadToStorage } from "@/lib/admin/image-upload";
 import { StatusMessage } from "./client";
 
 type Result = { ok: boolean; message: string } | null;
@@ -29,7 +29,7 @@ export function CoverUploader({
     setBusy(true);
     let path: string | null = null;
     try {
-      const prepared = await prepareImage(file);
+      const prepared = await prepareImage(file, await loadWatermark());
       path = await uploadToStorage(folder, prepared.blob);
       const result = await setCover(path);
       if (!result?.ok) throw new UploadError(result?.message ?? "Enregistrement impossible.");

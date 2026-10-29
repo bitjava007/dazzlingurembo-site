@@ -251,6 +251,7 @@ export type Database = {
           phone: string | null;
           tiktok_url: string | null;
           updated_at: string;
+          watermark_enabled: boolean;
           whatsapp_number: string | null;
         };
         Insert: {
@@ -265,6 +266,7 @@ export type Database = {
           phone?: string | null;
           tiktok_url?: string | null;
           updated_at?: string;
+          watermark_enabled?: boolean;
           whatsapp_number?: string | null;
         };
         Update: Partial<Database["public"]["Tables"]["site_settings"]["Insert"]>;

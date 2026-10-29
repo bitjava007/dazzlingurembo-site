@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/brand/logo";
 import { localePath, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { pick } from "@/lib/content/localize";
@@ -21,8 +22,8 @@ export function Footer({ locale, dict, settings }: FooterProps) {
     <footer className="bg-ink text-mist">
       <div className="mx-auto flex max-w-[1320px] flex-col gap-14 px-4 pb-10 pt-20 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col gap-3">
-            <span className="font-serif text-xl tracking-[0.26em] text-ivory">DAZZLING UREMBO</span>
+          <div className="flex flex-col gap-4">
+            <Logo className="h-14 self-start text-ivory" />
             <span className="font-serif text-lg italic text-gold">{dict.meta.tagline}</span>
           </div>
 

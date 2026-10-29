@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { StatusMessage } from "@/components/admin/client";
-import { ACCEPT_ATTRIBUTE, prepareImage, removeFromStorage, UploadError, uploadToStorage } from "@/lib/admin/image-upload";
+import { ACCEPT_ATTRIBUTE, loadWatermark, prepareImage, removeFromStorage, UploadError, uploadToStorage } from "@/lib/admin/image-upload";
 import { deleteModelImage, registerModelImage, reorderModelImages, updateImageAlt } from "../actions";
 
 export type AdminImage = { id: string; url: string; altFr: string; altEn: string; isPrimary: boolean };
@@ -25,13 +25,21 @@ export function PhotoManager({ modelId, images, modelName }: { modelId: string; 
   async function upload(files: FileList | null) {
     if (!files?.length) return;
     const list = Array.from(files);
+    setBusy("Préparation…");
+    let watermark;
+    try {
+      watermark = await loadWatermark();
+    } catch (e) {
+      done({ ok: false, message: e instanceof UploadError ? e.message : "L'envoi a échoué." });
+      return;
+    }
     const errors: string[] = [];
     let added = 0;
     for (const [i, file] of list.entries()) {
       setBusy(`Envoi de la photo ${i + 1} sur ${list.length}…`);
       let path: string | null = null;
       try {
-        const prepared = await prepareImage(file);
+        const prepared = await prepareImage(file, watermark);
         path = await uploadToStorage(`models/${modelId}`, prepared.blob);
         const result = await registerModelImage({ modelId, path, width: prepared.width, height: prepared.height });
         if (!result?.ok) throw new UploadError(result?.message ?? "Enregistrement impossible.");

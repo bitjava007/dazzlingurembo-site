@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Logo } from "@/components/brand/logo";
 import { translatePath, type Locale } from "@/i18n/config";
 import { ChatIcon, CloseIcon, MenuIcon } from "./icons";
 
@@ -70,8 +71,8 @@ export function Header({ locale, homeHref, items, labels, whatsappHref }: Header
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-ivory">
       <div className="mx-auto flex h-16 max-w-[1320px] items-center justify-between gap-6 px-4 sm:px-8 lg:h-20">
-        <Link href={homeHref} className="font-serif text-lg font-medium tracking-[0.24em] sm:text-2xl sm:tracking-[var(--tracking-wordmark)]">
-          DAZZLING UREMBO
+        <Link href={homeHref} className="shrink-0 text-ink">
+          <Logo className="h-10 lg:h-12" />
         </Link>
 
         <nav aria-label={labels.main} className="hidden lg:block">

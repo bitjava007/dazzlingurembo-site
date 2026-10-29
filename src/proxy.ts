@@ -3,18 +3,6 @@ import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, hasLocale, routeFromSegment, routes, type Locale } from "@/i18n/config";
 import { isSupabaseConfigured, supabaseKey, supabaseUrl } from "@/lib/supabase/env";
 
-function preferredLocale(request: NextRequest): Locale {
-  const header = request.headers.get("accept-language") ?? "";
-  const ranked = header
-    .split(",")
-    .map((part) => {
-      const [tag, q] = part.trim().split(";q=");
-      return { lang: tag.slice(0, 2).toLowerCase(), q: q ? Number(q) : 1 };
-    })
-    .sort((a, b) => b.q - a.q);
-  return (ranked.find((r) => hasLocale(r.lang))?.lang as Locale | undefined) ?? defaultLocale;
-}
-
 /** Pages de l'administration accessibles sans session. */
 const ADMIN_PUBLIC = ["/admin/connexion", "/admin/auth/"];
 
@@ -59,10 +47,10 @@ export async function proxy(request: NextRequest) {
   if (pathname === "/admin" || pathname.startsWith("/admin/")) return adminProxy(request);
   const [, first, segment, ...rest] = pathname.split("/");
 
-  // Sans langue : redirection vers la langue préférée du navigateur.
+  // Sans langue : le français, langue par défaut du site, quelle que soit celle du navigateur.
   if (!first || !hasLocale(first)) {
     const url = request.nextUrl.clone();
-    url.pathname = `/${preferredLocale(request)}${pathname === "/" ? "" : pathname}`;
+    url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
     return NextResponse.redirect(url);
   }
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ActionForm, SubmitButton } from "@/components/admin/client";
-import { Bilingual, Field, PageHeader, Panel, TextArea } from "@/components/admin/ui";
+import { Bilingual, Checkbox, Field, PageHeader, Panel, TextArea } from "@/components/admin/ui";
 import { requireAdmin } from "@/lib/admin/auth";
 import { updateSettings } from "./actions";
 
@@ -32,6 +32,12 @@ export default async function SettingsPage() {
             <Field label="Facebook" name="facebook_url" type="url" defaultValue={s?.facebook_url} placeholder="https://facebook.com/…" optional />
             <Field label="TikTok" name="tiktok_url" type="url" defaultValue={s?.tiktok_url} placeholder="https://tiktok.com/@…" optional />
           </div>
+        </Panel>
+        <Panel
+          title="Photos"
+          description="Cochée : chaque photo envoyée ensuite depuis l'administration (modèles, couvertures des catalogues et thématiques) reçoit le logo au centre, en transparence. Les photos déjà en ligne ne changent pas : renvoyez-les si elles doivent porter le logo."
+        >
+          <Checkbox label="Ajouter le logo Dazzling Urembo en filigrane sur les photos" name="watermark_enabled" defaultChecked={s?.watermark_enabled ?? false} />
         </Panel>
         <div>
           <SubmitButton>Enregistrer les paramètres</SubmitButton>

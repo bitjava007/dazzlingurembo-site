@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { Logo } from "@/components/brand/logo";
 import { LoginForm } from "./login-form";
 
 export const metadata: Metadata = { title: "Connexion" };
@@ -27,7 +28,7 @@ export default function LoginPage({ searchParams }: PageProps<"/admin/connexion"
   return (
     <main className="mx-auto flex min-h-dvh max-w-md flex-col justify-center gap-8 px-4 py-16">
       <div className="flex flex-col gap-2">
-        <span className="font-serif text-2xl tracking-[0.22em]">DAZZLING UREMBO</span>
+        <Logo className="mb-4 h-14 self-start text-ink" />
         <h1 className="text-xl font-medium">Administration</h1>
         <p className="text-sm text-taupe">
           Saisissez votre adresse : vous recevrez un lien de connexion à usage unique, sans mot de passe.
