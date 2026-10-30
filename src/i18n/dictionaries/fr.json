@@ -81,6 +81,10 @@
       "eyebrow": "Informations"
     }
   },
+  "story": {
+    "portraitAlt": "Portrait de Christelle Matabaro Ndamuso, vêtue d'une tenue blanche",
+    "portraitCaption": "Christelle Matabaro Ndamuso, fondatrice de Dazzling Urembo"
+  },
   "content": {
     "pending": "Contenu en cours de préparation",
     "pendingText": "Cette section sera complétée avec les textes et photographies officiels de la maison.",
